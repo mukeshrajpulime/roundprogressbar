@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Round Animated Progress bar</title>
+	<!--=======google fonts==========-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+	body
+	{
+		font-family: 'Poppins';
+
+	}
+
+		.circle-wrap {
+	
+  margin: 50px auto;
+  width: 150px;
+  height: 150px;
+  background: #e6e2e7;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle-wrap .circle .mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+.circle-wrap .circle .mask.full,
+.circle-wrap .circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(126deg);
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(126deg);
+  }
+}
+
+.circle-wrap .inside-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #fff;
+  line-height: 130px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+  letter-spacing: 0px;
+}
+.dias
+{
+	padding: 20px;
+	box-shadow: 0 8px 32px 0px rgba(0,0,0,0.37);
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top: 50%;
+	left: 48%;
+	border-radius: 10px;
+	padding-right: 40px;
+	padding-left: 40px;
+	letter-spacing: 5px;
+}
+
+</style>
+</head>
+<body>
+
+<blockquote class="dias">
+	<h3 style="text-align: center;">ROUND PROGRESS BAR</h3>
+	<hr style="width: 10%;">
+	<section>
+  <div class="circle-wrap">
+    <div class="circle">
+      <div class="mask full">
+        <div class="fill"></div>
+      </div>
+      <div class="mask half">
+        <div class="fill"></div>
+      </div>
+      <div class="inside-circle"> 70% </div>
+    </div>
+  </div>
+  <h3 style="text-align: center;">TITLE</h3>
+	<hr style="width: 10%;">
+	 <h3 style="text-align: center;font-size: 10px;">DESCRIPTION TEXT GOES HERE LOREM IPSUM...</h3>
+</section>
+
+</blockquote>
+</body>
+</html>
